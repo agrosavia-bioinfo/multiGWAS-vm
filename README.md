@@ -1,4 +1,4 @@
-# multiGWAS-vm
+# MultiGWAS virtual machine
 MultiGWAS ready-to-use VirtualBox virtual machine running Linux Ubuntu 18.04.
 
 
