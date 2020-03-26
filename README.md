@@ -7,25 +7,27 @@ MultiGWAS ready-to-use VirtualBox virtual machine running Linux Ubuntu 18.04.
 - [Downoload/Install](https://www.virtualbox.org/wiki/Downloads) the VirtualBox Software
 - Open the VirtualBox Software and import the MultiGWAS virtual machine:
 ```
-   File --> Import Apliance --> (select the folder and file of the downloaded virtual machines)
+  File --> Import Apliance --> (select the folder and file of the downloaded virtual machines)
 ```
 - Start the virtual machine
 ```
-   Click on the new MultiGWAS virtual machine
+  Click on the new MultiGWAS virtual machine
 ```
 - Log in as "mg" user with password "mg"
 - Open a Linux terminal (Terminal icon in the taskbar or in the applications menu)
    - Change to the "multiGWAS" folder:
 ```
-    cd multiGWAS
+     cd multiGWAS
 ```
+
    - Change to the "examples" folder:
 ```
-    cd examples
+     cd examples
 ```
+
    - Execute multiGWAS with either "naive.config" of "full.config" configuration files
 ```
-    multiGWAS full.config
+     multiGWAS full.config
 ```
 - Open a file manager to browse the results:
   - The "multiGWAS-report.html" file contains a full report in html format of the GWAS analysis.
