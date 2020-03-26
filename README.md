@@ -3,7 +3,7 @@ MultiGWAS ready-to-use VirtualBox virtual machine running Linux Ubuntu 18.04.
 
 
 # Usage instructions
-- Download the virtual machine from the [corpoicaorg repository](https://corpoicaorg-my.sharepoint.com/:u:/g/personal/lgarreta_agrosavia_co/EZmrEHKb5zdOj3PLwQGtiPcBY8w6oDt2Y-G75muPyWe_4w?e=dG86Ii)
+- Download the virtual machine from the [corpoicaorg repository](https://corpoicaorg-my.sharepoint.com/:u:/g/personal/lgarreta_agrosavia_co/EXYk6nDgdgBHkNtB16pQYXoBMsyoSV9t10KVKsVKzKTPxw?e=BjSPpK)
 - Import the virtual machine using the VirtualBox software
 - Start the virtual machine
 - Log in as "mg" user with password "mg"
