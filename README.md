@@ -6,10 +6,9 @@ MultiGWAS ready-to-use VirtualBox virtual machine running Linux Ubuntu 18.04.
 - Download the MultiGWAS virtual machine from the [corpoicaorg repository](https://corpoicaorg-my.sharepoint.com/:u:/g/personal/lgarreta_agrosavia_co/EXYk6nDgdgBHkNtB16pQYXoBMsyoSV9t10KVKsVKzKTPxw?e=BjSPpK)
 - [Downoload/Install](https://www.virtualbox.org/wiki/Downloads) the VirtualBox Software
 - Open the VirtualBox Software and import the MultiGWAS virtual machine:
-        
-        ```
+```
          File --> Import Apliance --> (select the folder and file of the downloaded virtual machines)
-         ```
+```
 - Start the virtual machine
         
         ```
