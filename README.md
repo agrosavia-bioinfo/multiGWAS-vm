@@ -50,17 +50,22 @@ To run a Full GWAS analysis with the multiGWAS tool, follow the next steps:
     - An "out" subfolder that contains temporary files created by multiGWAS and the other GWAS tools.
     - A "logs" subfolder that contains the log outputs from the different tools.
     
-# General usage
-  - Create a new folder (e.g. "test" folder).
-  - Copy the phenotype and genotype files to new folder (see data formats below)
-  - Create a configuration file (e.g. test.config) and copy it to the new folder (see configuration file below)
+# General usage for a MultiGWAS analysis on new genomic data
   - Open a Linux terminal
+  - Create a new folder (e.g. "test" folder):
+  ```
+     mkdir test
+   ```
+  - Copy the phenotype and genotype files (see data formats below) to new folder 
+     - See [shared folders](https://help.ubuntu.com/community/VirtualBox/SharedFolders) to copy files to the virtual machine.
+     
+  - Create a configuration file (e.g. test.config) and copy it to the new folder (see configuration file below)
   - Change to the new folder
   - Execute the multiGWAS tool using as argument the configuration file
-```
-      multiGWAS test.config
-```
-  - Results will be saved in the "out-test" folder
+  ```
+     multiGWAS test.config
+  ```
+  - Results will be saved in the "out-test" folder (check them using the file manager)
  
 # Genomic data formats
 ## Genotype:
