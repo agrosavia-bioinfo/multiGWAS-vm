@@ -1,0 +1,25 @@
+
+Table of Contents
+=================
+
+   * [MultiGWAS ready-to-use installations](#multigwas-ready-to-use-installations)
+   * [MultiGWAS virtual machine](#multigwas-virtual-machine)
+   * [Usage instructions](#usage-instructions)
+   * [Running MultiGWAS](#running-multigwas)
+      * [Observations](#observations)
+      * [Using the command line interface (CLI interface):](#using-the-command-line-interface-cli-interface)
+      * [Using the graphical user interface (GUI interface):](#using-the-graphical-user-interface-gui-interface)
+   * [Running the examples](#running-the-examples)
+   * [Configuration file](#configuration-file)
+      * [Example of a configuration file](#example-of-a-configuration-file)
+      * [Genomic data inputs](#genomic-data-inputs)
+         * ["genotypeFile"](#genotypefile)
+         * ["genotypeFormat"](#genotypeformat)
+         * ["phenotypeFile"](#phenotypefile)
+         * ["mapFile"](#mapfile)
+   * [Considerations](#considerations)
+      * [Implementation](#implementation)
+      * [Number of SNPs in Manhattan and QQ plots](#number-of-snps-in-manhattan-and-qq-plots)
+      * [Correction for multiple testing](#correction-for-multiple-testing)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
