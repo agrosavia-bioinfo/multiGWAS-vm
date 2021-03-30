@@ -1,10 +1,17 @@
+# MultiGWAS
+MultiGWAS is a tool that does GWAS for diploid and tetraploid organisms by executing in parallel four GWAS software, two for polyploid data (GWASpoly and SHEsis) and two for diploids data (GAPIT and TASSEL). MultiGWAS has several advantages. It runs either in the command line or in an graphical interface; it manages different genotype formats, including VCF; it allows control for population structure and relatedness, along with several quality control checks on genotype data. Besides, MultiGWAS can test for each GWAS tool all its gene action models, and through a proprietary scoring function, select the best model to report its associations. Finally, it generates several reports that facilitate the identification of false associations from both the significant and the top association SNP among the four software.
+
 # MultiGWAS ready-to-use installations
-MultiGWAS can be tested on any platform (Linux, OS X, Windows) by using either a VirtualBox virtual machine or a Docker container. In both, MultiGWAS has been installed with all its dependencies (Linux, R, R libraries, and Java). Both solutions are described below.
+MultiGWAS can be tested on any platform (Linux, OS X, Windows) by using either a Docker container or a VirtualBox virtual machine. In both, MultiGWAS has been installed with all its dependencies (Linux, R, R libraries, and Java). Both solutions are described below.
 
 Table of Contents
 =================
+   * [MultiGWAS docker container](#multigwas-docker-container)
+      * [1. Get MultiGWAS docker](#1-get-multigwas-docker)
+      * [2. Run MultiGWAS docker](#2-run-multigwas-docker)
+      * [3. Run MultiGWAS tool](#3-run-multigwas-tool)
    * [MultiGWAS virtual machine](#multigwas-virtual-machine)
-   * [Usage instructions](#usage-instructions)
+      * [Usage instructions](#usage-instructions)
    * [Running MultiGWAS](#running-multigwas)
       * [Observations](#observations)
       * [Using the command line interface (CLI interface):](#using-the-command-line-interface-cli-interface)
@@ -22,11 +29,52 @@ Table of Contents
       * [Number of SNPs in Manhattan and QQ plots](#number-of-snps-in-manhattan-and-qq-plots)
       * [Correction for multiple testing](#correction-for-multiple-testing)
 
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
+# MultiGWAS docker container
+The MultiGWAS CLI is distributed and run as a Docker image. To support this, you must have Docker installed and running locally. Below, we describe the steps to use the MultiGWAS docker persistently, it means that you can run MultiGWAS from docker but input data and output results will be taken and saved in your host system. 
+
+## 1. Get MultiGWAS docker 
+Open a terminal and follow the below instructions to pull the MultiGWAS docker container.  
+```
+1. Pull the container by typing:
+   docker pull lgarreta/multigwas
+2. Check the container is in your system by typing
+   docker image ls
+```
+
+## 2. Run MultiGWAS docker 
+1. Download and decompress the [MultiGWAS repository](https://github.com/agrosavia-bioinfo/multiGWAS/archive/refs/heads/master.zip). If you are using a terminal insted a file explorer, open a terminal and clone the repository using git:
+```
+  git clone https://github.com/agrosavia-bioinfo/multiGWAS.git
+```
+2. Using your system file explorer, go to the "my-analysis" folder into the MultiGWAS folder and open a terminal on it. If you are working in the terminal, change to the "my-analysis" directory:
+```
+  cd my-analysis
+```
+3. Run MultiGWAS docker in the terminal:
+```
+  docker run -v $(pwd):/root/my-analysis --rm -it lgarreta/multigwas bash
+```
+
+## 3. Run MultiGWAS tool 
+At this point MultiGWAS docker is running and input/output is from your host system. Follow the next instruction to run your first analysis:
+1. Using your system file explorer, go to the MultiGWAS folder and copy the three files (genotype, phenotype, and configuration files)  from the "examples/simple-test" folder into "my-analysis" folder.
+2. In the terminal running the MultiGWAS docker check that the above files were copyed by typing the Linux list "ll" command:
+```
+  ll
+```
+3. In the same terminal run MultiGWAS using as a parameter the configuration file, type:
+```
+  multigwas configuration-simple-test.config
+```
+MultiGWAS starts runnning and writing outputs to your "my-analysis" host folder. When it finishes, you can check the output files with your file explorer and open the html report with your favorite browser.
+
 
 # MultiGWAS virtual machine
 MultiGWAS ready-to-use VirtualBox virtual machine running Linux Ubuntu 18.04.
 
-# Usage instructions
+## Usage instructions
 - [Download](https://corpoicaorg-my.sharepoint.com/:u:/g/personal/lgarreta_agrosavia_co/EXYk6nDgdgBHkNtB16pQYXoBMsyoSV9t10KVKsVKzKTPxw?e=BjSPpK) the MultiGWAS virtual machine 
 - [Downoload/Install](https://www.virtualbox.org/wiki/Downloads) the VirtualBox software
 - Open the VirtualBox software and import the MultiGWAS virtual machine:
@@ -43,16 +91,16 @@ MultiGWAS ready-to-use VirtualBox virtual machine running Linux Ubuntu 18.04.
 ```
    cd multiGWAS
 ```
-- Change to the "examples" folder:
+- Change to the "examples/simple-test" folder:
 ```
-   cd examples
+   cd examples/simple-test
 ```
-- Execute multiGWAS with either "naive.config" of "full.config" configuration files
+- Execute multiGWAS with the configuration file 
 ```
-   multiGWAS full.config
+   multigwas configuration-simple-test.config
 ```
 - Browse the results by opening the file manager (Folder icon in the toolbar or in the Applications menu):
-  - The "multiGWAS-report.html" file contains a full report in html format of the GWAS analysis.
+  - The html file (XXXX-report.html) file contains a full report in html format of the GWAS analysis.
   - The "report" folder contains the original tables and graphics shown in the report.
   - The "out" folder contains the file outputs from MultiGWAS and from the four GWAS tools.
   - The "logs" folder contains log and output messages from the four GWAS tools.
