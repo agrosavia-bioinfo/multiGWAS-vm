@@ -63,7 +63,7 @@ MultiGWAS starts runnning and writing outputs into your working folder. When it 
 
 
 # MultiGWAS virtual machine
-It is a complete ready-to-use software package (Linux operating system, R system and libraries, file manager, html browser, and MultiGWAS application). The entire system consists of a single archive file ([multigwas-vm.ova](https://drive.google.com/file/d/1f2NYQzaz3PFGy2O9WRJLjt1tI59pQ6P-/view?usp=sharing)) that corresponds to a virtual appliance (also known as a virtual machine). The user only requires to download the [MultiGWAS appliance](https://drive.google.com/file/d/1f2NYQzaz3PFGy2O9WRJLjt1tI59pQ6P-/view?usp=sharing) and import it to a pre-installed virtualizer  as [VirtulBox](https://www.virtualbox.org/wiki/Downloads), which was used to construct the virtual appliance. 
+It is a complete ready-to-use software package (Linux operating system, R system and libraries, file manager, html browser, and MultiGWAS application). The entire system consists of a single archive file  that corresponds to a virtual appliance (also known as a virtual machine). The user only requires to download the MultiGWAS appliance ([multigas-vm.ova](https://drive.google.com/file/d/1f2NYQzaz3PFGy2O9WRJLjt1tI59pQ6P-/view?usp=sharing) file) and import it to a pre-installed virtualizer  as [VirtulBox](https://www.virtualbox.org/wiki/Downloads), which was used to construct the virtual appliance. 
 
 ## Usage instructions
 After installed VirtualBox virtualizer import and execute the appliance following the next instructions:
