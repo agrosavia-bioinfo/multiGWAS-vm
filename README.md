@@ -63,24 +63,25 @@ MultiGWAS starts runnning and writing outputs into your working folder. When it 
 
 
 # MultiGWAS virtual machine
-MultiGWAS ready-to-use VirtualBox virtual machine running Linux Ubuntu 18.04.
+It is a complete ready-to-use software package (Linux operating system, R system and libraries, file manager, html browser, and MultiGWAS application). The entire system consists of a single archive file ([multigwas-vm.ova](https://drive.google.com/file/d/1f2NYQzaz3PFGy2O9WRJLjt1tI59pQ6P-/view?usp=sharing)) that corresponds to a virtual appliance (also known as a virtual machine). The user only requires to download the [MultiGWAS appliance](https://drive.google.com/file/d/1f2NYQzaz3PFGy2O9WRJLjt1tI59pQ6P-/view?usp=sharing) and import it to a pre-installed virtualizer  as [VirtulBox](https://www.virtualbox.org/wiki/Downloads), which was used to construct the virtual appliance. 
 
 ## Usage instructions
-- [Download](https://corpoicaorg-my.sharepoint.com/:u:/g/personal/lgarreta_agrosavia_co/EXYk6nDgdgBHkNtB16pQYXoBMsyoSV9t10KVKsVKzKTPxw?e=BjSPpK) the MultiGWAS virtual machine 
-- [Downoload/Install](https://www.virtualbox.org/wiki/Downloads) the VirtualBox software
-- Open the VirtualBox software and import the MultiGWAS virtual machine:
+After installed VirtualBox virtualizer import and execute the appliance following the next instructions:
+<!--- [Download](https://corpoicaorg-my.sharepoint.com/:u:/g/personal/lgarreta_agrosavia_co/EXYk6nDgdgBHkNtB16pQYXoBMsyoSV9t10KVKsVKzKTPxw?e=BjSPpK) the MultiGWAS virtual machine 
+-->
+1. Open the VirtualBox software and import the MultiGWAS virtual machine:
 ```
    File --> Import Apliance --> (select the folder and file of the downloaded virtual machines)
 ```
-- Start the virtual machine
+2. Start the virtual machine
 ```
    Click on the new MultiGWAS virtual machine
 ```
-- Log in as "mg" user with password "mg"
-- Open a Linux terminal (Terminal icon in the toolbar or in the Applications menu)
-- Change to the "multiGWAS" folder:
+3. Log in as "mg" user with password "mg"
+4. Open a Linux terminal (Terminal icon in the toolbar or in the Applications menu)
+5. Change to the "multiGWAS" folder:
 ```
-   cd multiGWAS
+   cd multigwas
 ```
 - Change to the "examples/simple-test" folder:
 ```
